@@ -122,7 +122,7 @@ Untuk menggagalkan rencana Melkor, kita perlu menganalisis file capture untuk me
 ![alt text](images/image-25.png)
 
 1. Mengekstrak Objek dari Lalu Lintas HTTP. ```File -> Export Objects -> HTTP```. Kemudian terdapat file dengan extension ```.doc```
-    ![alt text](images/doc.png)
+    ![alt text](doc.png)
 Fitur ini akan menampilkan daftar lengkap semua objek (gambar, teks, file, dll.) yang ditransfer selama sesi tersebut.
 ```
 What is the name of the first suspicious file?
@@ -131,7 +131,7 @@ Format: file.exe
 ```
 
 2. kemudian terdapat file extension ```.exe```
-![alt text](images/exe.png)
+![alt text](exe.png)
 ```
 What is the name of the second suspicious file?
 Format: file.exe
@@ -197,9 +197,9 @@ KOMJAR25{Y0u_4re_g0dl1ke_1hMBEuCcWC7k6mpKj9MhEZrnq}
 ![alt text](images/image-14.png)
 
 ## Nomor 19
-![screenshot](images/Screenshot%202025-09-30%20203802.png)
+![alt text](images/Screenshot 2025-09-30 203802.png)
 1. Terdapat email ```YourLife36@7162.com```
-![screenshot](images/Screenshot%202025-09-30%20204041.png)
+![alt text](images/Screenshot 2025-09-30 204041.png)
 
 ```
 Who sent the threatening message?
@@ -208,7 +208,7 @@ Format: string (name)
 ```
 
 2. Kemudian ditemukan ```1600$```
-![screenshot](images/Screenshot%202025-09-30%20204105.png)
+![Screenshot](images/Screenshot 2025-09-30 204105.png)
 
 ```
 How much ransom did the attacker demand ($)?
@@ -217,7 +217,8 @@ Format: int
 ```
 
 3. Kemudian ditemukan juga bitcoin wallet nya
-![screenshot](images/Screenshot%202025-09-30%20204256.png) 
+![Screenshot](images/Screenshot 2025-09-30 204256.png)
+
 ```
 What is the attacker's bitcoin wallet?
 Format: string
