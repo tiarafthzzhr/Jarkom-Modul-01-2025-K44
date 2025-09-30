@@ -124,6 +124,7 @@ Untuk menggagalkan rencana Melkor, kita perlu menganalisis file capture untuk me
 ![alt text](images/image-25.png)
     
 Fitur ini akan menampilkan daftar lengkap semua objek (gambar, teks, file, dll.) yang ditransfer selama sesi tersebut.
+![alt text](image.png)
 
 ```
 What is the name of the first suspicious file?
@@ -132,6 +133,7 @@ Format: file.exe
 ```
 
 2. 
+![alt text](image-1.png)
 ```
 What is the name of the second suspicious file?
 Format: file.exe
@@ -197,7 +199,10 @@ KOMJAR25{Y0u_4re_g0dl1ke_1hMBEuCcWC7k6mpKj9MhEZrnq}
 ![alt text](images/image-14.png)
 
 ## Nomor 19
+![alt text](<Screenshot 2025-09-30 203802.png>)
 1. 
+![alt text](<Screenshot 2025-09-30 204041.png>)
+
 ```
 Who sent the threatening message?
 Format: string (name)
@@ -205,13 +210,16 @@ Format: string (name)
 ```
 
 2. 
+![alt text](<Screenshot 2025-09-30 204105.png>)
+
 ```
 How much ransom did the attacker demand ($)?
 Format: int
 > 1600
 ```
 
-3. 
+3.
+![alt text](<Screenshot 2025-09-30 204256.png>) 
 ```
 What is the attacker's bitcoin wallet?
 Format: string
