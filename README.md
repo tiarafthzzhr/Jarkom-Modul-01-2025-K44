@@ -119,20 +119,18 @@ KOMJAR25{Y0u_4r3_4_g00d_4nalyz3r_4oelz1p69nKdUbVRZpwZbMJvg}
 
 ## Nomor 17
 Untuk menggagalkan rencana Melkor, kita perlu menganalisis file capture untuk menemukan file berbahaya yang ia letakkan di web server Manwe. Analisis dilakukan dengan memeriksa file-file yang ditransfer melalui protokol HTTP.
-1. Mengekstrak Objek dari Lalu Lintas HTTP. ```File -> Export Objects -> HTTP```
-
 ![alt text](images/image-25.png)
-    
-Fitur ini akan menampilkan daftar lengkap semua objek (gambar, teks, file, dll.) yang ditransfer selama sesi tersebut.
-![alt text](doc.png)
 
+1. Mengekstrak Objek dari Lalu Lintas HTTP. ```File -> Export Objects -> HTTP```. Kemudian terdapat file dengan extension ```.doc```
+    ![alt text](doc.png)
+Fitur ini akan menampilkan daftar lengkap semua objek (gambar, teks, file, dll.) yang ditransfer selama sesi tersebut.
 ```
 What is the name of the first suspicious file?
 Format: file.exe
 > Invoice&MSO-Request.doc
 ```
 
-2. 
+2. kemudian terdapat file extension ```.exe```
 ![alt text](exe.png)
 ```
 What is the name of the second suspicious file?
