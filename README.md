@@ -124,7 +124,7 @@ Untuk menggagalkan rencana Melkor, kita perlu menganalisis file capture untuk me
 ![alt text](images/image-25.png)
     
 Fitur ini akan menampilkan daftar lengkap semua objek (gambar, teks, file, dll.) yang ditransfer selama sesi tersebut.
-![alt text](image.png)
+![alt text](doc.png)
 
 ```
 What is the name of the first suspicious file?
@@ -133,7 +133,7 @@ Format: file.exe
 ```
 
 2. 
-![alt text](image-1.png)
+![alt text](exe.png)
 ```
 What is the name of the second suspicious file?
 Format: file.exe
@@ -200,7 +200,7 @@ KOMJAR25{Y0u_4re_g0dl1ke_1hMBEuCcWC7k6mpKj9MhEZrnq}
 
 ## Nomor 19
 ![alt text](<Screenshot 2025-09-30 203802.png>)
-1. 
+1. Terdapat email ```YourLife36@7162.com```
 ![alt text](<Screenshot 2025-09-30 204041.png>)
 
 ```
@@ -209,7 +209,7 @@ Format: string (name)
 > Your Life
 ```
 
-2. 
+2. Kemudian ditemukan ```1600$```
 ![alt text](<Screenshot 2025-09-30 204105.png>)
 
 ```
@@ -218,7 +218,7 @@ Format: int
 > 1600
 ```
 
-3.
+3. Kemudian ditemukan juga bitcoin wallet nya
 ![alt text](<Screenshot 2025-09-30 204256.png>) 
 ```
 What is the attacker's bitcoin wallet?
@@ -227,7 +227,7 @@ Format: string
 Congratulations! Here is your flag: KOMJAR25{Y0u_4re_J4rk0m_G0d_ZE7Ukh4pJcJkLSgFsTElr5wV7}
 ```
 
-4. The Flag is Found
+4. The Flag is Found!
 ```
 KOMJAR25{Y0u_4re_J4rk0m_G0d_ZE7Ukh4pJcJkLSgFsTElr5wV7}
 ```
