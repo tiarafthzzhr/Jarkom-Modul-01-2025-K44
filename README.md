@@ -50,7 +50,6 @@ Format: Hydra v1.8.0-dev
 ```
 KOMJAR25{Brut3_F0rc3_105X4PP8SqxD8VmAsBgaoBbW4}
 ```
-![alt text](images/image-4.png)
 
 ## Nomor 15
 
@@ -77,7 +76,6 @@ How many files are suspected of containing malware?
 Format: int
 > 5
 ```
-![alt text](images/image-6.png)
 
 3. 
 ```
@@ -85,7 +83,6 @@ What is the hash of the first file (q.exe)?
 Format: sha256
 > ca34b0926cdc3242bbfad1c4a0b42cc2750d90db9a272d92cfb6cb7034d2a3bd
 ```
-![alt text](images/image-7.png)
 
 4. 
 ```
@@ -93,7 +90,6 @@ What is the hash of the second file (w.exe)?
 Format: sha256
 > 08eb941447078ef2c6ad8d91bb2f52256c09657ecd3d5344023edccf7291e9fc
 ```
-![alt text](images/image-8.png)
 
 5.
 ```
@@ -101,7 +97,6 @@ What is the hash of the third file (e.exe)?
 Format: sha256
 > 32e1b3732cd779af1bf7730d0ec8a7a87a084319f6a0870dc7362a15ddbd3199
 ```
-![alt text](images/image-9.png)
 
 6. 
 ```
@@ -109,7 +104,6 @@ What is the hash of the fourth file (r.exe)?
 Format: sha256
 > 4ebd58007ee933a0a8348aee2922904a7110b7fb6a316b1c7fb2c6677e613884
 ```
-![alt text](images/image-10.png)
 
 7. 
 ```
@@ -117,7 +111,6 @@ What is the hash of the fifth file (t.exe)?
 Format: sha256
 > 10ce4b79180a2ddd924fdc95951d968191af2ee3b7dfc96dd6a5714dbeae613a
 ```
-![alt text](images/image-11.png)
 
 8. The Flag is Found!
 ```
@@ -156,22 +149,26 @@ Congratulations! Here is your flag: KOMJAR25{M4ster_4n4lyzer_4Z5j0iIqGOXPzuEghyW
 
 
 ## Nomor 18
-![alt text](images/image-14.png)
-1. 
+Langkah pertama adalah membuka file capture di Wireshark. Karena metode Melkor kali ini berbeda, kita tidak lagi mencari di HTTP, melainkan di protokol SMB. ```File -> Export Objects -> SMB```. Fitur ini akan menampilkan semua file yang dibagikan atau ditransfer melalui jaringan menggunakan SMB.
+
+1. Terdapat extension file yang mencurigakan dengan dengan extension ```.exe``` sebanyak 2 files
+![alt text](image-3.png)
 ```
 How many files are suspected of containing malware?
 Format: int
 > 2
 ```
 
-2. 
+2. Terdapat file mencurigakan dengan extension ```.exe```
+![alt text](image-1.png)
 ```
 What is the name of the first malicious file?
 Format: file.exe
 > d0p2nc6ka3f_fixhohlycj4ovqfcy_smchzo_ub83urjpphrwahjwhv_o5c0fvf6.exe
 ```
 
-3. 
+3. Sama seperti nomor 2, terdapat file ```.exe``` lagi dibawahnya
+![alt text](image-2.png)
 ```
 Apa nama file berbahaya yang kedua?
 Format: file.exe
@@ -197,24 +194,28 @@ Congratulations! Here is your flag: KOMJAR25{Y0u_4re_g0dl1ke_1hMBEuCcWC7k6mpKj9M
 ```
 KOMJAR25{Y0u_4re_g0dl1ke_1hMBEuCcWC7k6mpKj9MhEZrnq}
 ```
+![alt text](images/image-14.png)
 
 ## Nomor 19
-![alt text](images/image-15.png)
-1. 
+1. Ketik ```smtp``` di filter, kemudian terdapat info ```MAIL FROM....```, kemudian klik kanan dan ```follow -> TCP follow```
+![alt text](image-4.png)
+![alt text](image-5.png)
 ```
 Who sent the threatening message?
 Format: string (name)
 > Your Life
 ```
 
-2. 
+2. Kemudian terdapat isi email ```To stop me, pay exactly 1600$ in bitcoin (BTC).```
+![alt text](image-6.png)
 ```
 How much ransom did the attacker demand ($)?
 Format: int
 > 1600
 ```
 
-3. 
+3. Dan terdapat isi bitcoin wallet ```1CWHmuF8dHt7HBGx5RKKLgg9QA2GmE3UyL```
+![alt text](image-7.png)
 ```
 What is the attacker's bitcoin wallet?
 Format: string
@@ -227,8 +228,10 @@ Congratulations! Here is your flag: KOMJAR25{Y0u_4re_J4rk0m_G0d_ZE7Ukh4pJcJkLSgF
 KOMJAR25{Y0u_4re_J4rk0m_G0d_ZE7Ukh4pJcJkLSgFsTElr5wV7}
 ```
 
+![alt text](images/image-15.png)
+
+
 ## Nomor 20
-![alt text](images/image-16.png)
 1. 
 ```
 What encryption method is used?
@@ -255,3 +258,4 @@ Congratulations! Here is your flag: KOMJAR25{B3ware_0f_M4lw4re_cwcD4U64nPPHru1lq
 ```
 KOMJAR25{B3ware_0f_M4lw4re_cwcD4U64nPPHru1lqR222zb3a}
 ```
+![alt text](images/image-16.png)
