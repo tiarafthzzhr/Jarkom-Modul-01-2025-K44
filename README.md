@@ -197,9 +197,9 @@ KOMJAR25{Y0u_4re_g0dl1ke_1hMBEuCcWC7k6mpKj9MhEZrnq}
 ![alt text](images/image-14.png)
 
 ## Nomor 19
-![alt text](<Screenshot 2025-09-30 203802.png>)
+![alt text](images/Screenshot 2025-09-30 203802.png)
 1. Terdapat email ```YourLife36@7162.com```
-![alt text](<Screenshot 2025-09-30 204041.png>)
+![alt text](images/Screenshot 2025-09-30 204041.png)
 
 ```
 Who sent the threatening message?
@@ -208,7 +208,7 @@ Format: string (name)
 ```
 
 2. Kemudian ditemukan ```1600$```
-![alt text](<Screenshot 2025-09-30 204105.png>)
+![alt text](images/Screenshot 2025-09-30 204105.png)
 
 ```
 How much ransom did the attacker demand ($)?
@@ -217,7 +217,7 @@ Format: int
 ```
 
 3. Kemudian ditemukan juga bitcoin wallet nya
-![alt text](<Screenshot 2025-09-30 204256.png>) 
+![alt text](images/Screenshot 2025-09-30 204256.png) 
 ```
 What is the attacker's bitcoin wallet?
 Format: string
