@@ -152,7 +152,7 @@ Congratulations! Here is your flag: KOMJAR25{M4ster_4n4lyzer_4Z5j0iIqGOXPzuEghyW
 Langkah pertama adalah membuka file capture di Wireshark. Karena metode Melkor kali ini berbeda, kita tidak lagi mencari di HTTP, melainkan di protokol SMB. ```File -> Export Objects -> SMB```. Fitur ini akan menampilkan semua file yang dibagikan atau ditransfer melalui jaringan menggunakan SMB.
 
 1. Terdapat extension file yang mencurigakan dengan dengan extension ```.exe``` sebanyak 2 files
-![alt text](image-3.png)
+![alt text](images/image-3.png)
 ```
 How many files are suspected of containing malware?
 Format: int
@@ -160,7 +160,7 @@ Format: int
 ```
 
 2. Terdapat file mencurigakan dengan extension ```.exe```
-![alt text](image-1.png)
+![alt text](images/image-1.png)
 ```
 What is the name of the first malicious file?
 Format: file.exe
@@ -168,7 +168,7 @@ Format: file.exe
 ```
 
 3. Sama seperti nomor 2, terdapat file ```.exe``` lagi dibawahnya
-![alt text](image-2.png)
+![alt text](images/image-2.png)
 ```
 Apa nama file berbahaya yang kedua?
 Format: file.exe
@@ -197,25 +197,21 @@ KOMJAR25{Y0u_4re_g0dl1ke_1hMBEuCcWC7k6mpKj9MhEZrnq}
 ![alt text](images/image-14.png)
 
 ## Nomor 19
-1. Ketik ```smtp``` di filter, kemudian terdapat info ```MAIL FROM....```, kemudian klik kanan dan ```follow -> TCP follow```
-![alt text](image-4.png)
-![alt text](image-5.png)
+1. 
 ```
 Who sent the threatening message?
 Format: string (name)
 > Your Life
 ```
 
-2. Kemudian terdapat isi email ```To stop me, pay exactly 1600$ in bitcoin (BTC).```
-![alt text](image-6.png)
+2. 
 ```
 How much ransom did the attacker demand ($)?
 Format: int
 > 1600
 ```
 
-3. Dan terdapat isi bitcoin wallet ```1CWHmuF8dHt7HBGx5RKKLgg9QA2GmE3UyL```
-![alt text](image-7.png)
+3. 
 ```
 What is the attacker's bitcoin wallet?
 Format: string
