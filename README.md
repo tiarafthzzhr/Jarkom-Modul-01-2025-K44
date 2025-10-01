@@ -55,6 +55,17 @@ MANWE (Client)
 ![Manwe2](manware2.png)
 
 
+
+## Nomor 5 
+Ainur terkuat Melkor tetap berusaha untuk menanamkan kejahatan ke dalam Arda (Bumi). Sebelum terjadi kerusakan, Eru dan para Ainur lainnya meminta agar semua konfigurasi tidak hilang saat semua node di restart.
+dimana disini praktikan sudah menguji seluruh konfigurasi (IP, ROUTING, DNS, dll.) 
+
+
+
+## Nomor 6
+Setelah semua Ainur terhubung ke internet, Melkor mencoba menyusup ke dalam komunikasi antara Manwe dan Eru. Jalankan sebuah file yang bernama traffic lalu lakukan packet sniffing menggunakan Wireshark pada koneksi antara Manwe dan Eru, lalu terapkan display filter untuk menampilkan semua paket yang berasal dari atau menuju ke IP Address Manwe. Simpan hasil capture tersebut sebagai bukti.
+
+
 ## Nomor 14
 
 1. Pertama tama, kita scroll packets hingga akhir dan menemukan jumlah total frame packets nya
