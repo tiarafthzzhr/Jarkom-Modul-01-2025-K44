@@ -19,6 +19,12 @@ Karena menurut Eru pada saat itu Arda (Bumi) masih terisolasi dengan dunia luar,
 ![rooteru](RootERU.png)
 ![rrooteru](RootERU2.png)
 
+
+
+## Nomor 3
+Sekarang praktikan harus pastikan setiap Ainur (Client) dapat terhubung satu sama lain.
+
+
 ## Nomor 14
 
 1. Pertama tama, kita scroll packets hingga akhir dan menemukan jumlah total frame packets nya
