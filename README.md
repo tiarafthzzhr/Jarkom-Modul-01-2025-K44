@@ -8,8 +8,9 @@
 ## Nomor 1
 ghyUntuk mempersiapkan pembuatan entitas selain mereka, Eru yang berperan sebagai Router membuat dua Switch/Gateway. Dimana Switch 1 akan menuju ke dua Ainur yaitu Melkor dan Manwe. Sedangkan Switch 2 akan menuju ke dua Ainur lainnya yaitu Varda dan Ulmo. Keempat Ainur tersebut diberi perintah oleh Eru untuk menjadi Client.
 
-disini praktikan diminta untuk mebuat topologinya 
-![alt text](images/topologi.png)
+disini praktikan diminta untuk membuat topologinya 
+![Topologi Jaringan](https://github.com/username/repo-name/blob/main/Screenshot%202025-10-01%20144946.png?raw=true)
+
 
 
 ## Nomor 2
