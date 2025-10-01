@@ -17,6 +17,7 @@ disini praktikan diminta untuk membuat topologinya
 Karena menurut Eru pada saat itu Arda (Bumi) masih terisolasi dengan dunia luar, maka buat agar Eru dapat tersambung ke internet.
 ![nodeeru](Nodeeru.png)
 ![rooteru](RootERU.png)
+![rrooteru](RootERU2.png)
 
 ## Nomor 14
 
