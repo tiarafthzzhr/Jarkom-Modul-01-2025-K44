@@ -16,6 +16,9 @@ disini praktikan diminta untuk membuat topologinya
 ## Nomor 2
 Karena menurut Eru pada saat itu Arda (Bumi) masih terisolasi dengan dunia luar, maka buat agar Eru dapat tersambung ke internet.
 ![nodeeru](Nodeeru.png)
+
+
+Berikut node ERU:
 ![rooteru](RootERU.png)
 ![rrooteru](RootERU2.png)
 
@@ -43,6 +46,8 @@ ULMO (Client)
 ![clientulmo2](Ulmo2.png)
 
 MELKOR (Client)
+![Melkor1](melkor1.png)
+![Melkor2](melkor2.png)
 
 
 MANWE (Client)
