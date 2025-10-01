@@ -64,7 +64,7 @@ dimana disini praktikan sudah menguji seluruh konfigurasi (IP, ROUTING, DNS, dll
 
 ## Nomor 6
 Setelah semua Ainur terhubung ke internet, Melkor mencoba menyusup ke dalam komunikasi antara Manwe dan Eru. Jalankan sebuah file yang bernama traffic lalu lakukan packet sniffing menggunakan Wireshark pada koneksi antara Manwe dan Eru, lalu terapkan display filter untuk menampilkan semua paket yang berasal dari atau menuju ke IP Address Manwe. Simpan hasil capture tersebut sebagai bukti.
-![wireshark1](wiresharkIP.png)
+![wireshark1](WiresharkIP.png)
 
 ## Nomor 14
 
