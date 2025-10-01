@@ -34,11 +34,18 @@ yang ditandai semua client sukses ping ke
 ```
 ping -c 5 google.com
 ```
-valda
-![clientvalda1](vald1.png)
-![clientvalda2](vald2.png)
+VARDA (Client)
+![clientvalda1](vald2.png)
+![clientvalda2](vald1.png)
+
+ULMO (Client)
+![clientulmo1](Ulmo1.png)
+![clientulmo2](Ulmo2.png)
+
+MELKOR (Client)
 
 
+MANWE (Client)
 
 ## Nomor 14
 
