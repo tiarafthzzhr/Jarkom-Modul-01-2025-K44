@@ -263,7 +263,7 @@ How many files are suspected of containing malware?
 Format: int
 > 5
 ```
-https://drive.google.com/file/d/1CNra4dER2Lwxu4sPpQ-e7QUgVG3HV5kW/view?usp=drive_link
+
 3. Kita `wget` dan `unzip` dulu 
 ` wget --no-check-certificate 'https://drive.google.com/uc?export=download&id=1CNra4dER2Lwxu4sPpQ-e7QUgVG3HV5kW' -O MelkorPlan1.zip && unzip MelkorPlan1.zip`
 kemudian `tshark`
