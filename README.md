@@ -263,36 +263,39 @@ How many files are suspected of containing malware?
 Format: int
 > 5
 ```
-
-3. 
+https://drive.google.com/file/d/1CNra4dER2Lwxu4sPpQ-e7QUgVG3HV5kW/view?usp=drive_link
+3. Kita `wget` dan `unzip` dulu 
+` wget --no-check-certificate 'https://drive.google.com/uc?export=download&id=1CNra4dER2Lwxu4sPpQ-e7QUgVG3HV5kW' -O MelkorPlan1.zip && unzip MelkorPlan1.zip`
+kemudian `tshark`
+setelah itu decrypt `sha256sum`
 ```
 What is the hash of the first file (q.exe)?
 Format: sha256
 > ca34b0926cdc3242bbfad1c4a0b42cc2750d90db9a272d92cfb6cb7034d2a3bd
 ```
 
-4. 
+4. Setelah itu decrypt `q.exe`
 ```
 What is the hash of the second file (w.exe)?
 Format: sha256
 > 08eb941447078ef2c6ad8d91bb2f52256c09657ecd3d5344023edccf7291e9fc
 ```
 
-5.
+5.  decrypt `e.exe`
 ```
 What is the hash of the third file (e.exe)?
 Format: sha256
 > 32e1b3732cd779af1bf7730d0ec8a7a87a084319f6a0870dc7362a15ddbd3199
 ```
 
-6. 
+6.  decrypt `r.exe`
 ```
 What is the hash of the fourth file (r.exe)?
 Format: sha256
 > 4ebd58007ee933a0a8348aee2922904a7110b7fb6a316b1c7fb2c6677e613884
 ```
 
-7. 
+7.  decrypt `t.exe`
 ```
 What is the hash of the fifth file (t.exe)?
 Format: sha256
@@ -325,7 +328,23 @@ Format: file.exe
 > knr.exe
 ```
 
-3. 
+3. Kita buat folder `nomor17`
+```
+mkdir nomor17 && cd nomor17
+```
+kemudian `wget` file nya dan `unzip`
+
+`wget --no-check-certificate 'https://drive.google.com/uc?export=download&id=1CNra4dER2Lwxu4sPpQ-e7QUgVG3HV5kW' -O MelkorPlan1.zip && unzip MelkorPlan1.zip`
+
+Setelah itu `tshark` file nya
+
+
+```
+tshark -r MelkorPlan2.pcap --export-objects http,./
+```
+
+![alt text](image.png)
+ BOOMM!! hasil decrypt nya ditemukan!
 ```
 What is the hash of the second suspicious file (knr.exe)?
 Format: sha256
@@ -438,14 +457,14 @@ Format: string
 > TLS
 ```
 
-2. 
+2. kemudian `tshark`
 ```
 What is the name of the malicious file placed by the attacker?
 Format: file.exe
 >  invest_20.dll
 ```
 
-3. 
+3. Kemudian `sha256`
 ```
 What is the hash of the file containing the malware?
 Format: sha256
