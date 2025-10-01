@@ -28,6 +28,9 @@ Sekarang praktikan harus pastikan setiap Ainur (Client) dapat terhubung satu sam
 ![client3](Client3.png)
 ![client4](Client4.png)
 
+## Nomor 4
+Setelah berhasil terhubung, sekarang Eru ingin agar setiap Ainur (Client) dapat mandiri. Oleh karena itu pastikan agar setiap Client dapat tersambung ke internet.
+
 ## Nomor 14
 
 1. Pertama tama, kita scroll packets hingga akhir dan menemukan jumlah total frame packets nya
