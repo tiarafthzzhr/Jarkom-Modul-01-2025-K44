@@ -46,6 +46,9 @@ MELKOR (Client)
 
 
 MANWE (Client)
+![Manwe1](manware1.png)
+![Manwe2](manware2.png)
+
 
 ## Nomor 14
 
