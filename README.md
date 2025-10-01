@@ -30,6 +30,15 @@ Sekarang praktikan harus pastikan setiap Ainur (Client) dapat terhubung satu sam
 
 ## Nomor 4
 Setelah berhasil terhubung, sekarang Eru ingin agar setiap Ainur (Client) dapat mandiri. Oleh karena itu pastikan agar setiap Client dapat tersambung ke internet.
+yang ditandai semua client sukses ping ke 
+```
+ping -c 5 google.com
+```
+valda
+![clientvalda](valda1.jpg)
+![clientvalda2](valda2.jpg)
+
+
 
 ## Nomor 14
 
