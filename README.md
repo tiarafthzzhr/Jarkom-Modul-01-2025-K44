@@ -35,8 +35,8 @@ yang ditandai semua client sukses ping ke
 ping -c 5 google.com
 ```
 valda
-![clientvalda1](valda1.png)
-![clientvalda2](valda2.png)
+![clientvalda1](vald1.png)
+![clientvalda2](vald2.png)
 
 
 
