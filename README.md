@@ -120,7 +120,103 @@ Format: string
 > Keyboard
 ```
 
-2. 
+2. Dengan menggunakan tshark dan tshark mendapatkan angak biner keyboar ```tshark -r file.pcapng -Y usbhid.data -T fields -e usbhid.data | head -n 10``` kemudian di decrypt menggunakan kode python   
+```
+#!/usr/bin/env python3
+# decode_hid.py
+# Usage: python3 decode_hid.py file.pcapng
+# Requires: tshark in PATH
+
+import sys, subprocess, re
+
+if len(sys.argv) < 2:
+    print("Usage: python3 decode_hid.py file.pcapng")
+    sys.exit(1)
+
+pcap = sys.argv[1]
+
+# try tshark possibilities
+candidates = [
+    f'tshark -r "{pcap}" -Y usb.capdata -T fields -e usb.capdata',
+    f'tshark -r "{pcap}" -Y usbhid.data -T fields -e usbhid.data',
+    f'tshark -r "{pcap}" -Y usb.data -T fields -e usb.data'
+]
+lines = None
+for cmd in candidates:
+    try:
+        p = subprocess.run(cmd, shell=True, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+        out = p.stdout.strip()
+        if out:
+            lines = out.splitlines()
+            used_cmd = cmd
+            break
+    except subprocess.CalledProcessError as e:
+        # try next
+        continue
+
+if lines is None:
+    print("No HID data extracted. Make sure tshark is installed and the pcap contains usb HID traffic.")
+    sys.exit(2)
+
+print("Using tshark command:")
+print(used_cmd)
+print(f"Extracted {len(lines)} report lines.\n")
+
+# HID usage map (partial US keyboard)
+hid_map = {
+    0x04:'a',0x05:'b',0x06:'c',0x07:'d',0x08:'e',0x09:'f',0x0a:'g',0x0b:'h',0x0c:'i',0x0d:'j',
+    0x0e:'k',0x0f:'l',0x10:'m',0x11:'n',0x12:'o',0x13:'p',0x14:'q',0x15:'r',0x16:'s',0x17:'t',
+    0x18:'u',0x19:'v',0x1a:'w',0x1b:'x',0x1c:'y',0x1d:'z',
+    0x1e:'1',0x1f:'2',0x20:'3',0x21:'4',0x22:'5',0x23:'6',0x24:'7',0x25:'8',0x26:'9',0x27:'0',
+    0x28:'\n',0x2c:' ',0x2d:'-',0x2e:'=',0x2f:'[',0x30:']',0x31:'\\',0x33:';',0x34:"'",0x36:',',0x37:'.',0x38:'/'
+}
+
+# shift mapping for numbers/symbols
+shift_map = {'1':'!','2':'@','3':'#','4':'$','5':'%','6':'^','7':'&','8':'*','9':'(','0':')'}
+def decode_report(bytes_list):
+    if len(bytes_list) < 3:
+        return ''
+    mod = bytes_list[0]
+    # usage codes typically start at index 2
+    chars = []
+    for usage in bytes_list[2:]:
+        if usage == 0:
+            continue
+        ch = hid_map.get(usage, '?')
+        shift = bool(mod & 0x02 or mod & 0x20)
+        if shift and ch.isalpha():
+            chars.append(ch.upper())
+        elif shift and ch.isdigit():
+            chars.append(shift_map.get(ch,ch))
+        else:
+            chars.append(ch)
+    return ''.join(chars)
+
+# parse each line into bytes
+reports = []
+for line in lines:
+    # find all two-digit hex groups
+    hexs = re.findall(r'[0-9a-fA-F]{2}', line)
+    if not hexs:
+        continue
+    byte_vals = [int(x,16) for x in hexs]
+    reports.append(byte_vals)
+
+# cleaned sequence (remove repeats of same usage tuple)
+cleaned = []
+last_key = None
+for b in reports:
+    key = tuple(b[2:]) if len(b) >= 3 else tuple()
+    if key == last_key:
+        continue
+    last_key = key
+    cleaned.append(b)
+
+decoded = ''.join(decode_report(b) for b in cleaned)
+print("Decoded (cleaned keystrokes):\n")
+print(decoded)
+```
+kemudian akan didaptkan hasil ```UGx6X3ByMHYxZGVfeTB1cl91czNybjRtZV80bmRfcDRzc3cwcmQ=``` 
 
 ```
 What did Melkor write?
@@ -128,7 +224,7 @@ Format: string
 > UGx6X3ByMHYxZGVfeTB1cl91czNybjRtZV80bmRfcDRzc3cwcmQ=
 ```
 
-3. 
+3. Lakukan decrypet mengguankan Cyber Chef
 ![alt text](images/15-3.png)
 ```
 What is Melkor's secret message?
@@ -266,14 +362,23 @@ Format: file.exe
 > oiku9bu68cxqenfmcsos2aek6t07_guuisgxhllixv8dx2eemqddnhyh46l8n_di.exe
 ```
 
-4. 
+4. Kemudian kita ```wget``` google drive nya
+![alt text](images/18-4-1.png)
+selanjutnya ```unzip``` foldernya
+![alt text](images/18-4-2.png)
+kemudian ```tshark``` 
+![alt text](images/18-4-3.png)
+decrypt dengan `sha256sum`
+![alt text](images/18-4-4.png)
+
 ```
 What is the hash of the first malicious file?
 Format: sha256
 > 59896ae5f3edcb999243c7bfdc0b17eb7fe28f3a66259d797386ea470c010040
 ```
 
-5. 
+5. dengan langkah di nomer `4` dan melanjutkan dengan `sha256sum` file second malicious nya
+![alt text](images/18-4-5.png)
 ```
 What is the hash of the second malicious file?
 Format: sha256
