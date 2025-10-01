@@ -16,7 +16,7 @@ disini praktikan diminta untuk membuat topologinya
 ## Nomor 2
 Karena menurut Eru pada saat itu Arda (Bumi) masih terisolasi dengan dunia luar, maka buat agar Eru dapat tersambung ke internet.
 ![nodeeru](Nodeeru.png)
-![Eru](Eru.png)
+
 ## Nomor 14
 
 1. Pertama tama, kita scroll packets hingga akhir dan menemukan jumlah total frame packets nya
