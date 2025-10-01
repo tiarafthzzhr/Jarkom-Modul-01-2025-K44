@@ -23,7 +23,10 @@ Karena menurut Eru pada saat itu Arda (Bumi) masih terisolasi dengan dunia luar,
 
 ## Nomor 3
 Sekarang praktikan harus pastikan setiap Ainur (Client) dapat terhubung satu sama lain.
-
+![client1](Client1.png)
+![client2](Client2.png)
+![client3](Client3.png)
+![client4](Client4.png)
 
 ## Nomor 14
 
