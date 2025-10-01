@@ -5,6 +5,15 @@
 | 1  | Ahmad Yazid Arifuddin  | 5027241040 |
 | 2  | Tiara Fatimah Azzahra  | 5027241090 |
 
+## Nomor 1
+ghyUntuk mempersiapkan pembuatan entitas selain mereka, Eru yang berperan sebagai Router membuat dua Switch/Gateway. Dimana Switch 1 akan menuju ke dua Ainur yaitu Melkor dan Manwe. Sedangkan Switch 2 akan menuju ke dua Ainur lainnya yaitu Varda dan Ulmo. Keempat Ainur tersebut diberi perintah oleh Eru untuk menjadi Client.
+
+disini praktikan diminta untuk mebuat topologinya 
+![Image]((https://github.com/username/repo-name/blob/main/topologi.png?raw=true))
+
+
+## Nomor 2
+Karena menurut Eru pada saat itu Arda (Bumi) masih terisolasi dengan dunia luar, maka buat agar Eru dapat tersambung ke internet.
 
 ## Nomor 14
 
