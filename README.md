@@ -121,7 +121,8 @@ Format: string
 > Keyboard
 ```
 
-2. Kita download dulu menggunakan `wget` & `unzip`. Maka command nya berikut `wget --no-check-certificate 'https://drive.google.com/uc?export=download&id=1PWxEBqlnWzRYx9yv8vI6ZXoYfEJ-fT62' -O hiddenmsg.zip && unzip hiddenmsg.zip`Dengan menggunakan tshark dan tshark mendapatkan angak biner keyboar ```tshark -r hiddenmsg.pcapng -Y usbhid.data -T fields -e usbhid.data | head -n 10``` kemudian di decrypt menggunakan kode python dengan nama file `decrypt.py`   
+2. Kita download dulu menggunakan `wget` & `unzip`. Maka command nya berikut `wget --no-check-certificate 'https://drive.google.com/uc?export=download&id=1PWxEBqlnWzRYx9yv8vI6ZXoYfEJ-fT62' -O hiddenmsg.zip && unzip hiddenmsg.zip`. 
+Dengan menggunakan tshark maka akan mendapatkan angka biner keyboard ```tshark -r hiddenmsg.pcapng -Y usbhid.data -T fields -e usbhid.data | head -n 10``` kemudian buat file code decrypt menggunakan kode python dengan nama file `decrypt.py` dan command `nano decrypt.py`   
 ```
 #!/usr/bin/env python3
 # decode_hid.py
@@ -346,9 +347,7 @@ Format: file.exe
 > knr.exe
 ```
 
-3. Kita buat folder `nomor17`
-```
-mkdir nomor17 && cd nomor17
+3. kita `wget` dan `unzip`
 ```
 kemudian `wget` file nya dan `unzip`
 
