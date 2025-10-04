@@ -113,14 +113,15 @@ KOMJAR25{Brut3_F0rc3_105X4PP8SqxD8VmAsBgaoBbW4}
 
 ## Nomor 15
 
-1. 
+1. Untuk mengetahui device yang digunakan adalah dengan melihat table Protocol nya dimana di gambar tertuslis USB
+![alt text](images/15-1.png)
 ```
 What device does Melkor use?
 Format: string
 > Keyboard
 ```
 
-2. Dengan menggunakan tshark dan tshark mendapatkan angak biner keyboar ```tshark -r file.pcapng -Y usbhid.data -T fields -e usbhid.data | head -n 10``` kemudian di decrypt menggunakan kode python   
+2. Kita download dulu menggunakan `wget` & `unzip`. Maka command nya berikut `wget --no-check-certificate 'https://drive.google.com/uc?export=download&id=1PWxEBqlnWzRYx9yv8vI6ZXoYfEJ-fT62' -O hiddenmsg.zip && unzip hiddenmsg.zip`Dengan menggunakan tshark dan tshark mendapatkan angak biner keyboar ```tshark -r hiddenmsg.pcapng -Y usbhid.data -T fields -e usbhid.data | head -n 10``` kemudian di decrypt menggunakan kode python dengan nama file `decrypt.py`   
 ```
 #!/usr/bin/env python3
 # decode_hid.py
@@ -216,6 +217,7 @@ decoded = ''.join(decode_report(b) for b in cleaned)
 print("Decoded (cleaned keystrokes):\n")
 print(decoded)
 ```
+Kemudian jalankan file python nya `python3 decrypt.py hiddenmsg.pcapng`
 kemudian akan didaptkan hasil ```UGx6X3ByMHYxZGVfeTB1cl91czNybjRtZV80bmRfcDRzc3cwcmQ=``` 
 
 ```
@@ -252,50 +254,66 @@ Format: user:pass
 ```
 ![alt text](images/image-5.png)
 
-2. File yang mencurigakan adalah file yang ```executable```  atau ```.exe``` sehingga terdapat 5 files yang mencurigakan berikut : 
+2. File yang mencurigakan adalah file yang ```executable```  atau ```.exe``` sehingga terdapat 5 files yang mencurigakan berikut atau bisa menggunakan command `ftp.request.command == "SIZE"` kemudian di save as:
+![alt text](images/16.png) 
 ![alt text](images/image-20.png) 
 ![alt text](images/image-19.png)
 ![alt text](images/image-22.png)
 ![alt text](images/image-23.png)
 ![alt text](images/image-24.png)
+atau bisa menggunakan command `ftp.request.command == "SIZE"`
 ```
 How many files are suspected of containing malware?
 Format: int
 > 5
 ```
 
-3. Kita `wget` dan `unzip` dulu 
-` wget --no-check-certificate 'https://drive.google.com/uc?export=download&id=1CNra4dER2Lwxu4sPpQ-e7QUgVG3HV5kW' -O MelkorPlan1.zip && unzip MelkorPlan1.zip`
-kemudian `tshark -r MelkorPlan1.pcap --export-objects ftp-data,./`
-setelah itu decrypt `sha256sum`
+3. Kemudian pada mode PASV FTP, server mengirimkan tuple (a,b,c,d,p1,p2), a.b.c.d adalah alamat IP dan p1,p2 adalah dua byte port. 
+
+Port TCP/UDP disimpan dalam byte tinggi (p1) dan byte rendah (p2), port dihitung sebagai berikut = p1*256 + p2
+
+contohnya berikut 
+![alt text](images/image-20.png)
+p1 = 199 dan p2 = 14. Menghasilkan port `199*256 + 145 = 51.089`
+
+kemudian kita gunakan port itu untuk package yang kita cari dengan filter `tcp.port == 51089` dan ini untuk `q.exe`
 ```
 What is the hash of the first file (q.exe)?
 Format: sha256
 > ca34b0926cdc3242bbfad1c4a0b42cc2750d90db9a272d92cfb6cb7034d2a3bd
 ```
 
-4. Setelah itu decrypt `q.exe`
+4.  `233*256 + 137 = 59785`
+![alt text](images/image-19.png)
+Setelah itu decrypt `q.exe`
 ```
 What is the hash of the second file (w.exe)?
 Format: sha256
 > 08eb941447078ef2c6ad8d91bb2f52256c09657ecd3d5344023edccf7291e9fc
 ```
 
-5.  decrypt `e.exe`
+5.  `193*256 + 98 = 49506`
+![alt text](images/image-22.png)
+decrypt `e.exe`
 ```
 What is the hash of the third file (e.exe)?
 Format: sha256
 > 32e1b3732cd779af1bf7730d0ec8a7a87a084319f6a0870dc7362a15ddbd3199
 ```
 
-6.  decrypt `r.exe`
+6. `237*256 + 227 = 60899` 
+![alt text](images/image-23.png)  
+
+decrypt `r.exe`
 ```
 What is the hash of the fourth file (r.exe)?
 Format: sha256
 > 4ebd58007ee933a0a8348aee2922904a7110b7fb6a316b1c7fb2c6677e613884
 ```
 
-7.  decrypt `t.exe`
+7. `195* 256 + 237 = 50157`
+![alt text](images/image-24.png)  
+decrypt `t.exe`
 ```
 What is the hash of the fifth file (t.exe)?
 Format: sha256
@@ -334,7 +352,7 @@ mkdir nomor17 && cd nomor17
 ```
 kemudian `wget` file nya dan `unzip`
 
-`wget --no-check-certificate 'https://drive.google.com/uc?export=download&id=1CNra4dER2Lwxu4sPpQ-e7QUgVG3HV5kW' -O MelkorPlan1.zip && unzip MelkorPlan1.zip`
+`wget --no-check-certificate 'https://drive.google.com/uc?export=download&id=1RYDSK7xnMI2i1eMdIsTBz53z7B1lFZqx' -O MelkorPlan2.zip && unzip MelkorPlan2.zip`
 
 Setelah itu `tshark` file nya
 
@@ -381,14 +399,11 @@ Format: file.exe
 > oiku9bu68cxqenfmcsos2aek6t07_guuisgxhllixv8dx2eemqddnhyh46l8n_di.exe
 ```
 
-4. Kemudian kita ```wget``` google drive nya
-![alt text](images/18-4-1.png)
-selanjutnya ```unzip``` foldernya
-![alt text](images/18-4-2.png)
-kemudian ```tshark``` 
-![alt text](images/18-4-3.png)
-decrypt dengan `sha256sum`
-![alt text](images/18-4-4.png)
+4. kemudian kita save all dan decrypt file tersebut di wsl kali linux
+
+
+
+
 
 ```
 What is the hash of the first malicious file?
@@ -396,8 +411,6 @@ Format: sha256
 > 59896ae5f3edcb999243c7bfdc0b17eb7fe28f3a66259d797386ea470c010040
 ```
 
-5. dengan langkah di nomer `4` dan melanjutkan dengan `sha256sum` file second malicious nya
-![alt text](images/18-4-5.png)
 ```
 What is the hash of the second malicious file?
 Format: sha256
@@ -457,14 +470,45 @@ Format: string
 > TLS
 ```
 
-2. kemudian `tshark`
+2. Kemudian kita ```wget``` google drive nya `wget --no-check-certificate 'https://drive.google.com/uc?export=download&id=1B3ZUqB1QruobkT59y3BTOwX0V5lV4lkA' -O MelkorPlan5.zip && unzip MelkorPlan5.zip`
+![alt text](images/18-4-1.png)
+selanjutnya ```unzip``` foldernya
+![alt text](images/18-4-2.png)
+kemudian `tshark`
+```
+tshark -r MelkorPlan5.pcap -q -o tls.keylog_file:keyslogfile.txt --export-objects http,./
+```
+kemudian `ls` dan akan muncul berikut
+```
+┌──(kali㉿yoga7i)-[~/20]
+└─$ ls
+ 1.0
+'1(1).0'
+'1(2).0'
+'1(3).0'
+'1(4).0'
+'1(5).0'
+'CC%3f&Clientid=%7bD61AB268-C26A-439D-BB15.20194&Audience=Production&Build=ship&Architecture=x64&Language=en-US&SubscriptionLicense=false&PerpetualLicense=2019&Channel=CC&InstallType=C2R&SessionId=%7b004BB289-F613-4DD4-8968-6CBD7BE8B7AB%7d&LabMachine=false'
+'docs(1).php'
+'docs(2).php'
+'docs(3).php'
+'docs(4).php'
+ docs.php
+ invest_20.dll
+ keyslogfile.txt
+ MelkorPlan5.pcap
+ MelkorPlan5.zip
+```
+karena hasilnya `.php` `.0` `.dll`, kita coba yang extension `.dll` kemudian BOOMM!! successss......
 ```
 What is the name of the malicious file placed by the attacker?
 Format: file.exe
 >  invest_20.dll
 ```
 
-3. Kemudian `sha256`
+3. Decrypt dengan `sha256sum`
+
+
 ```
 What is the hash of the file containing the malware?
 Format: sha256
