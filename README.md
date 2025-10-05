@@ -82,7 +82,9 @@ Ulmo, sebagai penjaga perairan, perlu mengirimkan data ramalan cuaca ke node Eru
 Kita harus mendownload dengan wget dengan command `wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=11ra_yTV_adsPIXeIPMSt0vrxCBZu0r33' -O cuaca.zip
 lalu kita menggunakan unzip, namun sebelum itu kita harus apt install unzip agar bisa menggunakan unzip dan jangan lupa apt install ftp biar kita bisa menggunakan ftp
 
-lalu kita upload dengan ip 192.233.1.3 dengan user ainur
+lalu kita upload dengan ip 192.233.1.3 dengan user ainur dan ```put cuaca.txt``` nya
+![cuaca](cuaca.png).
+
 
 ## Nomor 14
 
