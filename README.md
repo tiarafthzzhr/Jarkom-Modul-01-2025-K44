@@ -76,7 +76,12 @@ setelah itu kita melakukan ```service vsftpd restart``` agar config bisa terappl
 dan uji coba di root manwe
 ![ainur](ainur.png)
 
+## Nomor 8 
+Ulmo, sebagai penjaga perairan, perlu mengirimkan data ramalan cuaca ke node Eru. Lakukan koneksi sebagai client dari node Ulmo ke FTP Server Eru menggunakan user ainur. Upload suatu file. Analisis proses ini menggunakan Wireshark dan identifikasi perintah FTP yang digunakan untuk proses upload.
+Kita harus mendownload dengan wget dengan command `wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=11ra_yTV_adsPIXeIPMSt0vrxCBZu0r33' -O cuaca.zip
+alu kita menggunakan unzip, namun sebelum itu kita harus apt install unzip agar bisa menggunakan unzip dan jangan lupa apt install ftp biar kita bisa menggunakan ftp
 
+lalu kita upload dengan ip 192.233.1.3 dengan user ainur, lalu kita gunakan cmd put cuaca.txt biar bisa upload di ftp Eru.
 
 ## Nomor 14
 
