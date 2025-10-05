@@ -74,7 +74,7 @@ Pada soal ini kita dapat menginstall ```apt install vsftpd``` sebagai FTP Server
 
 setelah itu kita melakukan ```service vsftpd restart``` agar config bisa terapply dengan baik
 dan uji coba di root manwe
-![manwee](https://github.com/tiarafthzzhr/Jarkom-Modul-01-2025-K44/blob/main/images/Screenshot%2025-10-05224146.png)
+![manwee]([https://github.com/tiarafthzzhr/Jarkom-Modul-01-2025-K44/blob/main/images/Screenshot%202025-10-05%20224146.png)
 
 
 
