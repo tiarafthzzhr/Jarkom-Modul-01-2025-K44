@@ -64,7 +64,11 @@ dimana disini praktikan sudah menguji seluruh konfigurasi (IP, ROUTING, DNS, dll
 
 ## Nomor 6
 Setelah semua Ainur terhubung ke internet, Melkor mencoba menyusup ke dalam komunikasi antara Manwe dan Eru. Jalankan sebuah file yang bernama traffic lalu lakukan packet sniffing menggunakan Wireshark pada koneksi antara Manwe dan Eru, lalu terapkan display filter untuk menampilkan semua paket yang berasal dari atau menuju ke IP Address Manwe. Simpan hasil capture tersebut sebagai bukti.
-![wireshark](https://github.com/tiarafthzzhr/Jarkom-Modul-01-2025-K44/blob/main/images/Screenshot%202025-10-01%20221135.png)).
+![wireshark](https://github.com/tiarafthzzhr/Jarkom-Modul-01-2025-K44/blob/main/images/Screenshot%202025-10-01%20221135.png)
+
+## Nomor 7
+Untuk meningkatkan keamanan, Eru memutuskan untuk membuat sebuah FTP Server di node miliknya. Lakukan konfigurasi FTP Server pada node Eru. Buat dua user baru: ainur dengan hak akses write&read dan melkor tanpa hak akses sama sekali ke direktori shared. Buktikan hasil tersebut dengan membuat file teks sederhana kemudian akses file tersebut menggunakan kedua user.
+
 
 ## Nomor 14
 
