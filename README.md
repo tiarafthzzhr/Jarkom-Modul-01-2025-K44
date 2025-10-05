@@ -69,6 +69,9 @@ Setelah semua Ainur terhubung ke internet, Melkor mencoba menyusup ke dalam komu
 ## Nomor 7
 Untuk meningkatkan keamanan, Eru memutuskan untuk membuat sebuah FTP Server di node miliknya. Lakukan konfigurasi FTP Server pada node Eru. Buat dua user baru: ainur dengan hak akses write&read dan melkor tanpa hak akses sama sekali ke direktori shared. Buktikan hasil tersebut dengan membuat file teks sederhana kemudian akses file tersebut menggunakan kedua user.
 
+Pada soal ini kita dapat menginstall ```apt install vsftpd``` sebagai FTP Server pada eru, dan Client menggunakan ```apt install ftp```
+
+
 
 ## Nomor 14
 
