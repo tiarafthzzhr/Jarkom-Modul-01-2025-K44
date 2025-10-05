@@ -74,7 +74,7 @@ Pada soal ini kita dapat menginstall ```apt install vsftpd``` sebagai FTP Server
 
 setelah itu kita melakukan ```service vsftpd restart``` agar config bisa terapply dengan baik
 dan uji coba di root manwe
-![ainur]([ainur.png)
+![ainur](ainur.png)
 
 
 
