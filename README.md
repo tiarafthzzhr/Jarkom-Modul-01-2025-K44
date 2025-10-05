@@ -79,12 +79,18 @@ dan uji coba di root manwe
 ## Nomor 8 
 Ulmo, sebagai penjaga perairan, perlu mengirimkan data ramalan cuaca ke node Eru. Lakukan koneksi sebagai client dari node Ulmo ke FTP Server Eru menggunakan user ainur. Upload suatu file. Analisis proses ini menggunakan Wireshark dan identifikasi perintah FTP yang digunakan untuk proses upload.
 
-Kita harus mendownload dengan wget dengan command `wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=11ra_yTV_adsPIXeIPMSt0vrxCBZu0r33' -O cuaca.zip
-lalu kita menggunakan unzip, namun sebelum itu kita harus apt install unzip agar bisa menggunakan unzip dan jangan lupa apt install ftp biar kita bisa menggunakan ftp
+Kita harus mendownload file ```https://drive.google.com/drive/folders/1XQh6S1xXcaP1QoUhQSZORsgK9xdMUxXx?usp=sharing``` lalu kita unzip, namun sebelum itu kita harus apt install unzip agar bisa menggunakan unzip dan jangan lupa apt install ftp biar kita bisa menggunakan ftp
 
 lalu kita upload dengan ip 192.233.1.3 dengan user ainur dan ```put cuaca.txt``` nya
 ![cuaca](cuaca.png)
 ![wirecuaca](wirecuaca.png)
+
+## Nomor 9 
+Eru ingin membagikan "Kitab Penciptaan" di suatu link file kepada Manwe. Dari FTP Server Eru, download file tersebut ke node Manwe. Karena Eru merasa Kitab tersebut sangat penting maka ia mengubah akses user ainur menjadi read-only. Gunakan Wireshark untuk memonitor koneksi, identifikasi perintah FTP yang digunakan, dan uji akses user ainur.
+
+kita harus donwload file ini ```https://drive.google.com/drive/folders/1K1pf8Y1wh_y1f6b57VRtjs3hdkeQUao5?usp=sharing``` lalu kita unzip, namun sebelum itu kita harus apt install unzip agar bisa menggunakan unzip dan jangan lupa apt install ftp biar kita bisa menggunakan ftp
+
+
 
 
 ## Nomor 14
