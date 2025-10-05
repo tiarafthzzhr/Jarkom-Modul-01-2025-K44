@@ -83,7 +83,8 @@ Kita harus mendownload dengan wget dengan command `wget --no-check-certificate '
 lalu kita menggunakan unzip, namun sebelum itu kita harus apt install unzip agar bisa menggunakan unzip dan jangan lupa apt install ftp biar kita bisa menggunakan ftp
 
 lalu kita upload dengan ip 192.233.1.3 dengan user ainur dan ```put cuaca.txt``` nya
-![cuaca](cuaca.png).
+![cuaca](cuaca.png)
+![wirecuaca](wirecuaca.png)
 
 
 ## Nomor 14
