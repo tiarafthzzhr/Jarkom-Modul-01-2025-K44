@@ -72,6 +72,10 @@ Untuk meningkatkan keamanan, Eru memutuskan untuk membuat sebuah FTP Server di n
 Pada soal ini kita dapat menginstall ```apt install vsftpd``` sebagai FTP Server pada eru, dan Client menggunakan ```apt install ftp```
 ![vsftd](vsftpd.png)
 
+setelah itu kita melakukan ```service vsftpd restart``` agar config bisa terapply dengan baik
+dan uji coba di root manwe
+
+
 
 ## Nomor 14
 
